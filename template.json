@@ -1,0 +1,26 @@
+{
+    "variables": {
+        "aws_access_key": "",
+        "aws_secret_key": ""
+    },
+
+    "builders": [{
+            "type": "amazon-ebs",
+            "access_key": "{{user `aws_access_key`}}",
+            "secret_key": "{{user `aws_secret_key` }}",
+            "region": "us-west-2",
+            "source_ami": "ami-6aad335a",
+            "instance_type": "m1.small",
+            "ssh_username": "ubuntu",
+            "ami_name": "ubuntu 12.0.4-3.8 {{timestamp}}"
+            }],
+
+    "provisioners": [{
+            "type": "shell",
+            "scripts": [
+                "scripts/setup.sh"
+            ]
+    }],
+
+    "post-processors": ["vagrant"]
+}
