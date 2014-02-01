@@ -28,6 +28,8 @@ In order to build an Amazon AMI, DigitalOcean Droplet or Rackspace OpenStack ima
     export DIGITALOCEAN_CLIENT_ID="long-random-string"
     export DIGITALOCEAN_API_KEY="another-long-random-string"
 
+Please note: For DigitalOcean you may need to set your kernel manually in their web interface in order for it to stick. I have had a ticket into them for months now asking why my kernel choice doesn't seem to 'stick' - have had no answer.
+
 To build the images - use these Rakefile targets:
 
     rake build            # Build all Packer targets
