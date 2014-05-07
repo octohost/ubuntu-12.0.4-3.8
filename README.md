@@ -5,7 +5,7 @@ Packer template for Ubuntu 12.0.4 image with the 3.8 kernel.
 
 These EBS backed AMIs are available in:
 
-1. us-west-2: ami-8ab4dfba
+1. us-west-2: ami-05ed9a35
 2. us-west-1: ami-d2fac397
 3. us-east-1: ami-7718051e
 
